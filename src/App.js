@@ -55,7 +55,7 @@ class App extends Component {
               {this.state.boilerTypes.length}
             </span>
         </div>
-        <div className="col-md-4 text-center">
+        <div className="new-boiler-type">
           <BoilerTypesForm onAddBoilerTypes={this.handleAddBoilerTypes}></BoilerTypesForm>
         </div>
         <div className="container">
