@@ -14,6 +14,7 @@ class BoilerTypesForm extends Component {
     e.preventDefault();
     this.props.onAddBoilerTypes(this.state);
     this.setState({
+      id: '',
       description: ''
     });
   }
@@ -29,6 +30,16 @@ class BoilerTypesForm extends Component {
     return (
       <div className="new-element">
         <form onSubmit={this.handleSubmit} className="input-wraper">
+        <div className="input-description">
+            <input
+              type="text"
+              name="id"
+              className="form-control"
+              value={this.state.id}
+              onChange={this.handleInputChange}
+              placeholder="id"
+              />
+          </div>
           <div className="input-description">
             <input
               type="text"
