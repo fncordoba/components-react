@@ -20,11 +20,9 @@ function Modal(props) {
             <Button onClick={props.onClose}>Cancel</Button>
             <Button onClick={props.onSubmit} primary>{props.submitLabel || "Submit"}</Button>
           </div>
-
         </div>
       </div>
       <div className="overlay">
-
       </div>
     </>
   );
