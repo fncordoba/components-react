@@ -3,6 +3,11 @@ import './Modal.css';
 import Button from './Button';
 
 function Modal(props) {
+  const handleOnSubmit = () => {
+    props.onSubmit();
+    props.onClose();
+  };
+
   return (
     <>
       <div className="modal">
@@ -18,7 +23,7 @@ function Modal(props) {
           </div>
           <div className="actions">
             <Button onClick={props.onClose}>Cancel</Button>
-            <Button onClick={props.onSubmit} primary>{props.submitLabel || "Submit"}</Button>
+            <Button onClick={handleOnSubmit} primary>{props.submitLabel || "Submit"}</Button>
           </div>
         </div>
       </div>
